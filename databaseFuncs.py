@@ -4,7 +4,7 @@ from stockTickerFuncs import listTickers
 from Quandl import Quandl #cool
 
 client = MongoClient()
-db = client['test_database']
+db = client['fin_database']
 
 stockTickers = listTickers()
 
@@ -25,8 +25,6 @@ def saveAllHistoricalData():
 			print ticker + ": Saving data to database..."
 			collection = db['HISTORY_'+ticker]
 			collection.insert_many(historicalData)
-		if count == 10:
-			break
 		count+=1
 	print notFound
 	notFoundCollection = db['TICKER_NOT_FOUND']
