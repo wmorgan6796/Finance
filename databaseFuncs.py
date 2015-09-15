@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 from quandl import getHistoricalData
 from stockTickerFuncs import listTickers
-from Quandl import Quandl
+from Quandl import Quandl #cool
 
 client = MongoClient()
 db = client['test_database']
