@@ -1,0 +1,3 @@
+from databaseFuncs import saveAllHistoricalData
+
+saveAllHistoricalData()
